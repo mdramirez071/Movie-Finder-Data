@@ -13,7 +13,7 @@ app.use(morgan('dev')); //morgan is the middleware in this case
 const cache = {}; 
 
 //GET request that responds with movie data. Returns a status code of 200.
-axios.get('/', function(req, res){
+app.get('/', function(req, res){
     //Once the GET request is sent, it queries all of the data and stores it into a variable called movieData
     var movieData = req.query;
     //Then each "key" is extracted from the movieData Object and each key is stored into the variable called 'key'
