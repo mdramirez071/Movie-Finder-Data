@@ -22,7 +22,6 @@ app.get('/', function(req, res){
     var value = Object.values(movieData);
     //Once the key and value has been stored, it generates a url by concatenating the original URL of the DB w/API key + the key and value respectively.
     var url = 'http://www.omdbapi.com/?apikey=8730e0e&'  + key + '=' + encodeURI(value);
-    //console.log(cache);
     //the if statement checks to see if the value matches the current property/key of the object called cache.
     if (cache.hasOwnProperty(value)){
         //if the value does indeed match up with the property of the object then respond back with a json file by passing in that value;
